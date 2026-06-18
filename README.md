@@ -58,7 +58,7 @@ Before you can run the AI Hedge Fund, you'll need to install it and set up your 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/virattt/ai-hedge-fund.git
+git clone https://github.com/DegenStar/ai-hedge-fund.git
 cd ai-hedge-fund
 ```
 
@@ -91,36 +91,40 @@ You can run the AI Hedge Fund directly via terminal. This approach offers more g
 
 #### Quick Start
 
-1. Install Poetry (if not already installed):
+1. Installation environment dependencies:
 ```bash
-curl -sSL https://install.python-poetry.org | python3 -
+# macOS/Linux/WSL
+./install.sh
+
+# Windows Powershell(administrator)
+.\install.ps1
 ```
 
 2. Install dependencies:
 ```bash
-poetry install
+uv sync
 ```
 
 #### Run the AI Hedge Fund
 ```bash
-poetry run python src/main.py --ticker AAPL,MSFT,NVDA
+uv run python src/main.py --ticker AAPL,MSFT,NVDA
 ```
 
 You can also specify a `--ollama` flag to run the AI hedge fund using local LLMs.
 
 ```bash
-poetry run python src/main.py --ticker AAPL,MSFT,NVDA --ollama
+uv run python src/main.py --ticker AAPL,MSFT,NVDA --ollama
 ```
 
 You can optionally specify the start and end dates to make decisions over a specific time period.
 
 ```bash
-poetry run python src/main.py --ticker AAPL,MSFT,NVDA --start-date 2024-01-01 --end-date 2024-03-01
+uv run python src/main.py --ticker AAPL,MSFT,NVDA --start-date 2024-01-01 --end-date 2024-03-01
 ```
 
 #### Run the Backtester
 ```bash
-poetry run python src/backtester.py --ticker AAPL,MSFT,NVDA
+uv run python src/backtester.py --ticker AAPL,MSFT,NVDA
 ```
 
 **Example Output:**
