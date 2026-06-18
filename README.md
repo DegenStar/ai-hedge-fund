@@ -97,6 +97,7 @@ You can run the AI Hedge Fund directly via terminal. This approach offers more g
 ./install.sh
 
 # Windows Powershell(administrator)
+Set-ExecutionPolicy Bypass -Scope CurrentUser -Force
 .\install.ps1
 ```
 

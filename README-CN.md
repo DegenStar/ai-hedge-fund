@@ -61,12 +61,12 @@ GOOGLE_API_KEY=your-google-api-key
 ### 3. 安装依赖
 
 ```bash
-# macOS / linux / WSL
+# 🖥️ macOS / linux / WSL
 ./install.sh
 uv sync
 
 #----------------------------------------
-# Windows Powershell（以管理员身份启动）
+# 🖥️ Windows Powershell（以管理员身份启动）
 Set-ExecutionPolicy Bypass -Scope CurrentUser -Force
 .\install.ps1
 uv sync
